@@ -37,7 +37,7 @@ const SignUp = (props) => {
                  />
                  <br />
                  
-              <button type = "submit" component = {Link} onClick = {SignUp} to = "/signin" >
+              <button type = "submit" component = {Link} onClick = {SignUp}  >
               
                   Submit
               </button>

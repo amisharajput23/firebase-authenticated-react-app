@@ -25,7 +25,7 @@ signin(email, password){
     return this.auth.signInWithEmailAndPassword(email, password)
 }
 
-signout (){
+logOut (){
     return this.auth.signOut()
 }
 

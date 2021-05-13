@@ -22,9 +22,9 @@ const Success = (props) => {
                     <AppBar title = "MY APP" >
                     <FlatButton key={1} label="Dashboard" style={buttonStyle}/>
                     <br />
-                    <Link to = "/signin" >
- <FlatButton key={2} label="LogOut" style={buttonStyle}/>            
- </Link>
+                    
+                       <FlatButton key={2} label="LogOut" style={buttonStyle} onClick = {signout}  />            
+ 
                     </AppBar>
                     
                     <h1>WELCOME,{firebase.getCurrentUsername()} </h1>
@@ -32,7 +32,11 @@ const Success = (props) => {
             </MuiThemeProvider>
         )
     
-        }
-
+        
+async function signout (){
+    await firebase.logOut();
+    props.history.push('/') 
+}
+}
 
 export default withRouter(Success);
